@@ -1,5 +1,6 @@
 const express = require("express");
 const { graphqlHTTP } = require("express-graphql");
+var cors = require('cors')  
 
 const {
     GraphQLSchema,
@@ -11,6 +12,7 @@ const {
 } = require("graphql");
 
 const app = express();
+app.use(cors()) 
 
 
 const authors = [
