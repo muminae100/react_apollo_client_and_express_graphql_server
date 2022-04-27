@@ -11,6 +11,7 @@ query {
 export const ALL_AUTHORS_QUERY = gql`
 query {
   authors{
+    id
     name
   }
 }

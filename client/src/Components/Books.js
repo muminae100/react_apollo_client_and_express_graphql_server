@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import { useAllBooks } from "../Hooks/useAllBooks";
 
 
@@ -13,7 +14,9 @@ const Books = () => {
       <div>
       <h1>All books</h1>
       {data.books.map((book, index) => (
-      <p key={index}>{book.name}</p>
+      <Link key={index} to={`/book/${book.id}`}>
+      <p>{book.name}</p>
+      </Link>
       ))}
       </div>
     )
